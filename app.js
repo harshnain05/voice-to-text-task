@@ -13,9 +13,9 @@ recognition.onresult = function (event) {
 function copyDivToClipboard() {
     var range = document.createRange();
     range.selectNode(document.getElementById("result"));
-    window.getSelection().removeAllRanges(); // clear current selection
-    window.getSelection().addRange(range); // to select text
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
     document.execCommand("copy");
-    window.getSelection().removeAllRanges();// to deselect
+    window.getSelection().removeAllRanges();
     alert("Copied the text:")
 }
